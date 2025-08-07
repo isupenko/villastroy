@@ -61,20 +61,22 @@
 
    &__items {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(rem(250), 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(rem(300), 1fr));
       gap: rem(32);
       @media (max-width: $mobile){
-         grid-template-columns: repeat(auto-fit, minmax(rem(150), 1fr));
+         grid-template-columns: repeat(auto-fit, minmax(rem(200), 1fr));
          gap: rem(15);
       }
    }
 }
 
 .item-ready{
-   background: #f8f8f8;
+   background: $lightGrayColor;
    display: flex;
    flex-direction: column;
    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+   border-radius: rem(20);
+   
 
    &__image {
       padding-bottom: math.div(200px, 300px) * 100%;
@@ -98,9 +100,49 @@
 
    &__feature {
       line-height: 120%;
+      font-weight: 600;
+      color: $grayColor;
+   }
+
+   &__square {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $blueColor;
+      border-radius: rem(10);
+      padding: rem(5);
+      margin: rem(2) rem(0);
+   }
+
+   &__floors {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $blueColor;
+      border-radius: rem(10);
+      padding: rem(5);
+      margin: rem(2) rem(0);
+   }
+
+   &__rooms {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $blueColor;
+      border-radius: rem(10);
+      padding: rem(5);
+      margin: rem(2) rem(0);
+   }
+
+   &__name {
+
+   }
+
+   &__value {
+
    }
 
    &__price {
+      font-size: rem(20);
+      display: flex;
+      justify-content: flex-end;
       padding-top: rem(10);
       font-weight: 600;
    }
@@ -199,7 +241,7 @@
       height: 100%;
       width: 100vw;
       left: 0;
-      background-color: #fff;
+      background-color: $bgColor;
       z-index: 2;
       transform: translate(-100%, 0);
    }
@@ -208,6 +250,7 @@
    }
 
    &__slide {
+      border-radius: rem(20);
       width: rem(360);
       position: relative;
       overflow: hidden;

@@ -23,7 +23,8 @@ $blueColor: #35aff4;
 $darkBlueColor: #058cd8;
 $grayColor: #909090;
 $darkGrayColor: #616161;
-$liteGrayColor: #f4f6f5;
+$lightGrayColor: #f4f6f5;
+$bgColor: #fffbf8;
 
 // НАСТРОЙКИ ===============================================================================================================================================================================================================================================================================================
 // Минимальная ширина страницы
@@ -69,14 +70,19 @@ body {
 	flex: 1 1 auto;
 
 	&__promo {
-		@include adaptiveValue("padding-top", 120, 30);
-		@include adaptiveValue("padding-bottom", 44, 30);
+		@include adaptiveValue("padding-top", 140, 30);
+		@include adaptiveValue("padding-bottom", 50, 30);
 		@media (max-width: $tablet){
 			padding-top: rem(80);
 		}
 		@media (max-width: $mobile){
 			padding-top: rem(60);
 		}
+	}
+
+	&__example {
+		@include adaptiveValue("padding-top", 60, 30);
+		@include adaptiveValue("padding-bottom", 60, 30);
 	}
 }
 
