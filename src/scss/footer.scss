@@ -1,0 +1,112 @@
+.footer {
+    &__body {
+        border-top: 1px solid #d8d8d8;
+        display: grid;
+        grid-template-columns: rem(300) 1fr;
+        margin-top: rem(20);
+        padding-top: rem(40);
+        padding-bottom: rem(20);
+        column-gap: rem(80);
+
+        @media (max-width:$tablet) {
+            grid-template-rows: auto;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        @media (max-width:$tablet) {
+            margin-bottom: rem(30);
+        }
+    }
+
+    &__logo {
+        font-size: rem(22);
+        font-weight: 700;
+    }
+
+    &__text {
+        line-height: 150%;
+        margin: rem(15) 0;
+    }
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__item {
+        display: inline-flex;
+        align-items: center;
+        line-height: 150%;
+        transition: color 0.3s ease 0s;
+        &::before {
+            margin-right: rem(10);
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                color: $darkBlueColor;
+            }
+        }
+    }
+}
+
+.menu-footer {
+    @media (min-width:$mobile) {
+        display: flex;
+    }
+    &__column {
+        @media (min-width:$mobile) {
+            flex: 1 1 33.333%
+        }
+    }
+
+    &__list {
+        @media (max-width:$mobile) {
+            margin-bottom: rem(20);
+        }
+        li {
+            &:not(:last-child) {
+                margin-bottom: rem(15);
+            }
+        }
+    }
+
+    &__link {
+        transition: color 0.3s ease 0s;
+        line-height: 120%;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $darkBlueColor;
+            }
+        }
+    }
+
+    &__title {
+        cursor: default;
+        margin-bottom: rem(15);
+        ._spoller-init &{
+            display: flex;
+            width: 100%;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            align-items: center;
+            @extend ._icon-arrow-down;
+            &::before {
+                @extend %ic;
+                font-size: rem(12);
+                transition: transform 0.3s ease 0s;
+            }
+        }
+        &._spoller-active {
+            &::before {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+}

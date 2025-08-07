@@ -1,0 +1,186 @@
+// Заголовки, общие БЄМ блоки и проче...
+._footer-title {
+   font-size: rem(24);
+   color: #000000;
+   font-weight: 700;
+   line-height: em(29, 24);
+}
+
+.title-h2 {
+	@include adaptiveValue("font-size", 40, 30);
+	font-weight: 700;
+	line-height: 120%;
+	text-align: center;
+}
+
+.title-h1 {
+	@include adaptiveValue("font-size", 60, 30);
+	font-weight: 700;
+	line-height: 120%;
+	//text-align: center;
+}
+
+.title-h3 {
+	@include adaptiveValue("font-size", 30, 20);
+	font-weight: 700;
+	line-height: 120%;
+	//text-align: center;
+}
+
+.title-h4 {
+	@include adaptiveValue("font-size", 20, 16);
+	font-weight: 600;
+	line-height: 120%;
+	//text-align: center;
+}
+
+.title-h5 {
+	@include adaptiveValue("font-size", 16, 14);
+	font-weight: 600;
+	line-height: 120%;
+	//text-align: center;
+}
+
+.title-h6 {
+	@include adaptiveValue("font-size", 14, 12);
+	font-weight: 700;
+	line-height: 120%;
+	//text-align: center;
+}
+
+.slider-arrows {
+	display: grid;
+	grid-template-columns: repeat(2, rem(48));
+	column-gap: rem(8);
+}
+.slider-arrow {
+	border-radius: 50%;
+	height: rem(48);
+	background-color: #fff;
+	border: 1px solid $blueColor;
+	color: $blueColor;
+	font-size: rem(12);
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+
+   &_prew {
+		&::before {
+			transform: rotate(90deg);
+		}
+   }
+
+   &_next {
+		&::before {
+			transform: rotate(-90deg);
+		}
+   }
+	@media (any-hover: hover){
+		&:hover{
+			color: #fff;
+			background-color: $blueColor;
+		}
+	}
+
+	&_white {
+		box-shadow: 0 rem(4) rem(14) rem(1) rgba(0, 0, 0, 0.16);
+		background-color: #fff;
+		@media (any-hover: hover){
+			&:hover{
+				background-color: $darkBlueColor;
+				color: #fff;
+			}
+		}
+	}
+}
+
+.swiper-pagination-bullets {
+	display: flex;
+	flex-wrap: wrap;
+}
+.swiper-pagination-bullet {
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	flex: 0 0 rem(27);
+	height: rem(27);
+	margin: rem(2) 0;
+	&:not(&:last-child) {
+		margin-right: rem(12);
+	}
+	&::after {
+		content: "";
+		width: rem(11);
+		height: rem(11);
+		background-color: #d8d8d8;
+		border-radius: 50%;
+		transition: background-color 0.3s ease 0s;
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+		border: 1px solid $blueColor;
+		transition: transform 0.3s ease 0s;
+		transform: scale(0);
+	}
+}
+.swiper-pagination-bullet-active {
+	&::after {
+		background-color: $blueColor;
+	}
+
+	&::before {
+		transform: scale(1);
+	}
+}
+
+.btn {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 600;
+	padding: 15px 30px;
+	text-align: center;
+	background-color: $blueColor;
+	color: #fff;
+   font-size:rem(16);
+	border: 1px solid $blueColor;
+	border-radius: rem(10);
+	transition: all 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+         border: 1px solid !important;
+			background-color: #fff;
+			color: $blueColor;
+         font-weight: 600;
+		}
+	}
+}
+
+
+.btn-more {
+	font-size: rem(16);
+	color: $blueColor;
+	font-weight: 700;
+	text-decoration: underline;
+	padding: rem(5);
+	transition: color 0.3s ease 0s;
+	@media (any-hover: hover){
+		&:hover{
+			color: $darkBlueColor;
+		}
+	}
+}
+
+._flyImage.-ibg {
+	opacity: 1;
+	position: fixed;
+	z-index: 10;
+	transition: all 1s ease 0s;
+}
