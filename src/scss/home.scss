@@ -15,6 +15,7 @@
    }
 
    &__info {
+
       width: 60%;
       padding-right: rem(40);
       @media (max-width: $tablet){
@@ -34,7 +35,7 @@
          width: 268px;
          height: 24px;
          z-index: -1;
-         background-image: url(./../img/promo/underline.svg);
+         background-image: url(../img/promo/underline.svg);
          background-repeat: no-repeat;
       }
 
@@ -48,8 +49,91 @@
 
    }
 
+   &__img {
+      position: relative;
+   }
+
    &__image {
       max-width: 100%;
+   }
+
+   &__skils {
+
+   }
+
+   &__tel {
+      left: rem(10);
+      top: rem(30);
+      background: rgba(255, 255, 255, 0.9);
+      @include adaptiveValue("padding", 20, 15);
+      @include adaptiveValue("font-size", 26, 22);
+      font-weight: 900;
+      border-radius: 20px;
+      box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5);
+      display: inline-flex;
+      align-items: center;
+      transition: color 0.3s ease 0s;
+      position: absolute;
+      &::before {
+         margin-right: rem(20);
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            color: $darkBlueColor;
+         }
+      }
+   }
+
+   &__slogan {
+      font-style: italic;
+      right: rem(10);
+      bottom: rem(30);
+      background: rgba(255, 255, 255, 0.9);
+      @include adaptiveValue("padding", 20, 15);
+      @include adaptiveValue("font-size", 20, 16);
+      font-weight: 900;
+      border-radius: 20px;
+      box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5);
+      display: inline-flex;
+      align-items: center;
+      transition: color 0.3s ease 0s;
+      position: absolute;
+   }
+}
+
+.skils {
+   display: flex;
+   justify-content: space-between;
+   gap: rem(10);
+   @media (max-width: $mobile){
+         flex-wrap: wrap;
+      }
+   &__item{
+      width: rem(200);
+      //height: rem(170);
+      padding: rem(20) rem(5);
+      //border: 2px solid $blueColor;
+      border-radius: rem(20);
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      @media (max-width: $mobile){
+         width: 100%;
+      }
+   }
+
+   &__value {
+      @include adaptiveValue("font-size", 30, 20);
+      padding-bottom: rem(15);
+      font-weight: 700;
+      color: $blueColor;
+      border-bottom: 1px solid $blueColor;
+
+   }
+
+   &__txt {
+      @include adaptiveValue("font-size", 18, 14);
+      font-weight: 600;
+      padding-top: 15px;
    }
 }
 
