@@ -84,6 +84,28 @@ body {
 		@include adaptiveValue("padding-top", 60, 30);
 		@include adaptiveValue("padding-bottom", 60, 30);
 	}
+
+	&__foundation {
+		@include adaptiveValue("padding-top", 140, 30);
+		@include adaptiveValue("padding-bottom", 50, 30);
+		@media (max-width: $tablet){
+			padding-top: rem(80);
+		}
+		@media (max-width: $mobile){
+			padding-top: rem(60);
+		}
+	}
+
+	&__roofing {
+		@include adaptiveValue("padding-top", 140, 30);
+		@include adaptiveValue("padding-bottom", 50, 30);
+		@media (max-width: $tablet){
+			padding-top: rem(80);
+		}
+		@media (max-width: $mobile){
+			padding-top: rem(60);
+		}
+	}
 }
 
 // Оболочка ============================================================================================================================================================================================================================================================================================================================================================================================================================================
