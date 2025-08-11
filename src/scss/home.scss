@@ -476,7 +476,7 @@
 /* ----------------------------- foundation ---------------------------------*/
 
 .foundation {
-   @include adaptiveValue("font-size", 18, 14);
+   @include adaptiveValue("font-size", 18, 16);
    line-height: 140%;
    & h3 {
       @include adaptiveValue("padding-top",30 , 20);
@@ -516,7 +516,7 @@
 /* ----------------------------- roofing ---------------------------------*/
 
 .roofing {
-   @include adaptiveValue("font-size", 18, 14);
+   @include adaptiveValue("font-size", 18, 16);
    line-height: 140%;
    & h3 {
       @include adaptiveValue("padding-top",30 , 20);
@@ -552,3 +552,208 @@
 }
 
 /* ----------------------------- /roofing ---------------------------------*/
+
+/* ___________________________________________________________________________*/
+/* ----------------------------- repair ---------------------------------*/
+
+.repair {
+   @include adaptiveValue("font-size", 18, 16);
+   line-height: 140%;
+   & h3 {
+      @include adaptiveValue("padding-top",30 , 20);
+      @include adaptiveValue("padding-bottom",15 , 10);
+   }
+   & li {
+      list-style-type: disc;
+      margin-left: rem(40);
+   }
+   & p {
+      padding: 5px 0 5px 0px;
+   }
+
+   &__tel {
+      background: rgba(255, 255, 255, 0.9);
+      @include adaptiveValue("padding", 20, 15);
+      @include adaptiveValue("font-size", 26, 22);
+      font-weight: 900;
+      border-radius: 20px;
+      box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5);
+      display: inline-flex;
+      align-items: center;
+      transition: color 0.3s ease 0s;
+      &::before {
+         margin-right: rem(20);
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            color: $darkBlueColor;
+         }
+      }
+   }
+}
+
+/* ----------------------------- /repair ---------------------------------*/
+
+/* ___________________________________________________________________________*/
+/* ----------------------------- design ---------------------------------*/
+
+.design {
+   @include adaptiveValue("font-size", 18, 16);
+   line-height: 140%;
+   & h3 {
+      @include adaptiveValue("padding-top",30 , 20);
+      @include adaptiveValue("padding-bottom",15 , 10);
+   }
+   & li {
+      list-style-type: disc;
+      margin-left: rem(40);
+   }
+   & p {
+      padding: 5px 0 5px 0px;
+   }
+
+   &__tel {
+      background: rgba(255, 255, 255, 0.9);
+      @include adaptiveValue("padding", 20, 15);
+      @include adaptiveValue("font-size", 26, 22);
+      font-weight: 900;
+      border-radius: 20px;
+      box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5);
+      display: inline-flex;
+      align-items: center;
+      transition: color 0.3s ease 0s;
+      &::before {
+         margin-right: rem(20);
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            color: $darkBlueColor;
+         }
+      }
+   }
+}
+
+/* ----------------------------- /design ---------------------------------*/
+
+/* ___________________________________________________________________________*/
+/* ----------------------------- fence ---------------------------------*/
+
+.fence {
+   @include adaptiveValue("font-size", 18, 16);
+   line-height: 140%;
+   & h3 {
+      @include adaptiveValue("padding-top",30 , 20);
+      @include adaptiveValue("padding-bottom",15 , 10);
+   }
+   & li {
+      list-style-type: disc;
+      margin-left: rem(40);
+   }
+   & p {
+      padding: 5px 0 5px 0px;
+   }
+
+   &__tel {
+      background: rgba(255, 255, 255, 0.9);
+      @include adaptiveValue("padding", 20, 15);
+      @include adaptiveValue("font-size", 26, 22);
+      font-weight: 900;
+      border-radius: 20px;
+      box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5);
+      display: inline-flex;
+      align-items: center;
+      transition: color 0.3s ease 0s;
+      &::before {
+         margin-right: rem(20);
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            color: $darkBlueColor;
+         }
+      }
+   }
+}
+
+/* ----------------------------- /fence ---------------------------------*/
+
+/* ___________________________________________________________________________*/
+/* ----------------------------- project ---------------------------------*/
+
+.project {
+   @include adaptiveValue("font-size", 18, 16);
+   line-height: 140%;
+   & h3 {
+      @include adaptiveValue("padding-top",30 , 20);
+      @include adaptiveValue("padding-bottom",15 , 10);
+   }
+   & li {
+      list-style-type: disc;
+      margin-left: rem(40);
+   }
+   & p {
+      padding: 5px 0 5px 0px;
+   }
+
+   &__tel {
+      background: rgba(255, 255, 255, 0.9);
+      @include adaptiveValue("padding", 20, 15);
+      @include adaptiveValue("font-size", 26, 22);
+      font-weight: 900;
+      border-radius: 20px;
+      box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5);
+      display: inline-flex;
+      align-items: center;
+      transition: color 0.3s ease 0s;
+      &::before {
+         margin-right: rem(20);
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            color: $darkBlueColor;
+         }
+      }
+   }
+}
+
+/* ----------------------------- /project ---------------------------------*/
+
+/* ___________________________________________________________________________*/
+/* ----------------------------- roads ---------------------------------*/
+
+.roads {
+   @include adaptiveValue("font-size", 18, 16);
+   line-height: 140%;
+   & h3 {
+      @include adaptiveValue("padding-top",30 , 20);
+      @include adaptiveValue("padding-bottom",15 , 10);
+   }
+   & li {
+      list-style-type: disc;
+      margin-left: rem(40);
+   }
+   & p {
+      padding: 5px 0 5px 0px;
+   }
+
+   &__tel {
+      background: rgba(255, 255, 255, 0.9);
+      @include adaptiveValue("padding", 20, 15);
+      @include adaptiveValue("font-size", 26, 22);
+      font-weight: 900;
+      border-radius: 20px;
+      box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.5);
+      display: inline-flex;
+      align-items: center;
+      transition: color 0.3s ease 0s;
+      &::before {
+         margin-right: rem(20);
+      }
+      @media (any-hover: hover) {
+         &:hover {
+            color: $darkBlueColor;
+         }
+      }
+   }
+}
+
+/* ----------------------------- /roads ---------------------------------*/

@@ -106,6 +106,61 @@ body {
 			padding-top: rem(60);
 		}
 	}
+
+	&__repair {
+		@include adaptiveValue("padding-top", 140, 30);
+		@include adaptiveValue("padding-bottom", 50, 30);
+		@media (max-width: $tablet){
+			padding-top: rem(80);
+		}
+		@media (max-width: $mobile){
+			padding-top: rem(60);
+		}
+	}
+
+	&__design {
+		@include adaptiveValue("padding-top", 140, 30);
+		@include adaptiveValue("padding-bottom", 50, 30);
+		@media (max-width: $tablet){
+			padding-top: rem(80);
+		}
+		@media (max-width: $mobile){
+			padding-top: rem(60);
+		}
+	}
+
+	&__fence {
+		@include adaptiveValue("padding-top", 140, 30);
+		@include adaptiveValue("padding-bottom", 50, 30);
+		@media (max-width: $tablet){
+			padding-top: rem(80);
+		}
+		@media (max-width: $mobile){
+			padding-top: rem(60);
+		}
+	}
+
+	&__project {
+		@include adaptiveValue("padding-top", 140, 30);
+		@include adaptiveValue("padding-bottom", 50, 30);
+		@media (max-width: $tablet){
+			padding-top: rem(80);
+		}
+		@media (max-width: $mobile){
+			padding-top: rem(60);
+		}
+	}
+
+	&__roads {
+		@include adaptiveValue("padding-top", 140, 30);
+		@include adaptiveValue("padding-bottom", 50, 30);
+		@media (max-width: $tablet){
+			padding-top: rem(80);
+		}
+		@media (max-width: $mobile){
+			padding-top: rem(60);
+		}
+	}
 }
 
 // Оболочка ============================================================================================================================================================================================================================================================================================================================================================================================================================================
