@@ -80,6 +80,11 @@ body {
 		}
 	}
 
+	&__construction {
+		@include adaptiveValue("padding-top", 30, 10);
+		@include adaptiveValue("padding-bottom", 60, 30);
+	}
+
 	&__example {
 		@include adaptiveValue("padding-top", 60, 30);
 		@include adaptiveValue("padding-bottom", 60, 30);

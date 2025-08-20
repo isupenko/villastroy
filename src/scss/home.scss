@@ -139,6 +139,114 @@
 
 /* ----------------------------- / promo ---------------------------------*/
 
+/* ----------------------------- construction ---------------------------------*/
+
+.construction {
+
+   &__body {
+      display: flex;
+      gap: rem(5);
+      height: rem(250);
+      }
+      a {
+         position: relative;
+         flex: 1;
+         text-align: center;
+         text-decoration: none;
+         color: #ffffff;
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         transition: flex .4s;
+         border-radius: rem(20);
+      }
+   &__wood {
+      background-image: url(../img/construction/wood.jpg);
+      background-color: rgb(109, 170, 230);
+   }
+   &__stone {
+      background-image: url(../img/construction/stone.jpg);
+      background-color: rgb(69, 98, 229);
+   }
+   &__country {
+      background-image: url(../img/construction/country.jpg);
+      background-color: rgb(60, 43, 214);
+   }
+   &__modular {
+      background-image: url(../img/construction/modular.jpg);
+      background-color: rgb(113, 33, 205);
+   }
+}
+.construction__body a:hover {
+   flex: 3;
+}
+
+.construction__body .overlay {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 0 10px;
+   position: absolute;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   transition: background-color .4s;
+}
+
+.construction__body a:hover .overlay {
+   background-color: rgba(0, 0, 0, .5);
+   border-radius: rem(20);
+}
+
+  .construction__body .overlay-inner * {
+   visibility: hidden;
+   opacity: 0;
+   transform-style: preserve-3d;
+}
+
+.construction__body .overlay h2 {
+   transform: translate3d(0, -60px, 0);
+}
+
+.construction__body .overlay p {
+   transform: translate3d(0, 60px, 0);
+}
+
+.construction__body a:hover .overlay-inner * {
+   opacity: 1;
+   visibility: visible;
+   transform: none;
+   transition: all .3s .3s;
+}
+
+@media (max-width:$tablet){
+   
+   .construction__body {
+      flex-direction: column;
+      height: rem(600);
+   }
+   .construction__body .overlay {
+      background-color: rgba(0, 0, 0, 0.5 );
+      border-radius: rem(20);
+      //background-color: transparent;
+   }
+   .construction__body a:hover {
+      flex: 1;
+   }
+   .construction__body a:hover .overlay {
+      background-color: transparent;
+   }
+   .construction__body .overlay h2,
+   .construction__body .overlay p {
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+   }
+}
+
+/* ----------------------------- / construction ---------------------------------*/
+
 
 /* ----------------------------- ready ---------------------------------*/
 
@@ -484,6 +592,7 @@
    }
 
    &__item {
+      background-color: #fff;
       width: rem(220);
       height: rem(150);
       border-radius: rem(20);
